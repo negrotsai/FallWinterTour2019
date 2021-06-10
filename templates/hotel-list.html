@@ -1,0 +1,53 @@
+<div class="text-center pt-3">往下查看清單↓</div>
+{{#each this}}
+<article class="card card-product bg-light">
+  <div class="card-body">
+    <div class="row">
+      <aside class="col-sm-4">
+        <div class="img-wrap">
+          <img src="{{ImgServer AgodaID}}/images/{{ AgodaID }}/{{ImgNameRe rooms.[0].images.[0]}}" />
+        </div>
+      </aside>
+      {{!-- col.// --}}
+      <article class="col-sm-5">
+        <h4 class="title">{{ name }}</h4>
+        <div class="distance-wrap h4">
+          <span class="distance"> {{ distance }} km </span>
+        </div>
+        <dl class="dlist-align">
+          <dt>住址</dt>
+          <dd>{{ address }}</dd>
+        </dl>
+        {{!-- item-property-hor .// --}}
+        <dl class="dlist-align">
+          <dt>連絡電話</dt>
+          <dd>{{ phone }}</dd>
+        </dl>
+        {{!-- item-property-hor .// --}}
+      </article>
+      {{!-- col.// --}}
+      <aside class="col-sm-3 border-left">
+        <div class="action-wrap">
+          <div class="price-wrap h4">
+            <span class="price"> ${{rooms.[0].price}} </span>
+          </div>
+          {{!-- item-property-hor .// --}}
+          <dl class="dlist-align">
+            <dt>房型</dt>
+            <dd>{{rooms.[0].name}}</dd>
+          </dl>
+          {{!-- item-property-hor .// --}}
+          <dl class="dlist-align">
+            <dt>容納人數</dt>
+            <dd>{{rooms.[0].adults}}人</dd>
+          </dl>
+        </div>
+      </aside>
+      {{!-- col.// --}}
+    </div>
+    {{!-- row.// --}}
+  </div>
+  {{!-- card-body .// --}}
+</article>
+{{!-- card product .// --}}
+{{/each}}
